@@ -1,0 +1,65 @@
+\documentclass[UTF8, 11pt, a4paper,oneside]{ctexart}
+%设置行距
+\linespread{1.3}
+%%%ctex宏集控制
+\ctexset{
+%%%摘要标题设置
+abstractname = {本文概要},
+%%%参考文献标题设置
+bibname = {文\quad 献},
+%%%%字体库设置(Windows字体库中支持的字体命令)
+%************** \songti 宋体 \heiti 黑体 \fangsong 仿宋
+%************** \kaishu 楷书 \lishu 隶书 \youyuan 圆体
+%************** \yahei 微软雅黑
+% fontset = {windows},
+%设置标点处理格式 quanjiao(全角) banjiao(半角) kaiming(开明式) CCT(CCT式)
+punct = {CCT},
+%是否在生成PDF后保留空格 true(全保留,编码换行时需用%取消换行空格) false auto
+space = {auto},
+%设置首行缩进 单位 \ccwd
+autoindent = {2\ccwd},
+%设置日期 big(全汉字)、small(数字和汉字)、old(全英文)
+today = { small },
+%设置字体弹性间距
+linestretch = {\maxdimen},
+%%%章节格式设置
+section = {
+    numbering = {true},
+    number = \arabic{section},  %希腊数字(arabic)、罗马数字(Roman)、字母（alph）
+    name = {第,部分},
+    format = {\Large\bfseries },
+    nameformat = {},
+    numberformat = {},
+    titleformat = {},  
+    runin = {false},
+    indent = 0pt, 
+} 
+}
+\setlength{\parindent}{20pt}
+
+\usepackage{fancyhdr, indentfirst, amsmath, amsthm, amssymb, appendix, bm, graphicx, hyperref, mathrsfs, float, geometry}
+\pagestyle{fancy}   
+\lhead{\thepage}
+
+\cfoot{ }
+
+
+
+\begin{document}
+
+\title{测试文档}
+\date{ \today }
+\author{Nobody}
+\maketitle
+\tableofcontents
+
+
+\section{This is first Sec}
+\subsection{ This is first subSec}
+中文文档类测试。你需要将所有源文件保存为 UTF-8 编码。
+你可以使用 XeLaTeX、LuaLaTeX 或 upLaTeX 编译，也可以使用 (pdf)LaTeX 编译。
+推荐使用 XeLaTeX 或 LuaLaTeX 编译。对高级用户，我们也推荐使用 upLaTeX 编译。
+
+
+
+\end{document}
